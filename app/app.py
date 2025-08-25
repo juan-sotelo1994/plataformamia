@@ -5,10 +5,12 @@ app = Flask(__name__)
 
 # resgistro de las importaciones y configuraciones 
 from portal import portalprincipal
+from auth import autenticar
 
 # Registro de blueprints
 
 app.register_blueprint(portalprincipal)
+app.register_blueprint(autenticar)
 
 
 
