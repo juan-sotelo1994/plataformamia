@@ -9,3 +9,9 @@ def index():
 def quienes(): 
     return render_template('quienes.html')
 
+@portalprincipal.route('/contactanos')
+def contactanos():
+    return render_template('Contactanos.html')
+
+
+
