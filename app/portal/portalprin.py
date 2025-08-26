@@ -8,3 +8,4 @@ def index():
 @portalprincipal.route('/quienes')
 def quienes(): 
     return render_template('quienes.html')
+

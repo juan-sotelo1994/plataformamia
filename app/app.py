@@ -6,11 +6,14 @@ app = Flask(__name__)
 # resgistro de las importaciones y configuraciones 
 from portal import portalprincipal
 from auth import autenticar
+from servicios import servi
+
 
 # Registro de blueprints
 
 app.register_blueprint(portalprincipal)
 app.register_blueprint(autenticar)
+app.register_blueprint(servi)
 
 
 

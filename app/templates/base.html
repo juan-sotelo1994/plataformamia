@@ -47,7 +47,7 @@
                 <div class="col-lg-4 text-center text-lg-end">
                     <div class="d-inline-flex align-items-center" style="height: 45px;">
                         <a href="#"><small class="me-3 text-dark"><i class="fa fa-user text-primary me-2"></i>Register</small></a>
-                        <a href="#"><small class="me-3 text-dark"><i class="fa fa-sign-in-alt text-primary me-2"></i>Login</small></a>
+                        <a href="{{ url_for('autenticar.login') }}"><small class="me-3 text-dark"><i class="fa fa-sign-in-alt text-primary me-2"></i>Login</small></a>
 
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                                 <span class="dropdown-toggle">Servicios</span>
                             </a>
                             <div class="dropdown-menu m-0">
-                                <a href="feature.html" class="dropdown-item">Automatizaciones</a>
+                                <a href="{{ url_for('servi.serviciosautoma') }}" class="dropdown-item">Automatizaciones</a>
                                 <a href="offer.html" class="dropdown-item">Asesoria Juridica</a>
                                 <a href="team.html" class="dropdown-item">Backups de Informacion</a>
                                 <a href="testimonial.html" class="dropdown-item">Diseño de Sistemas Electricos</a>
