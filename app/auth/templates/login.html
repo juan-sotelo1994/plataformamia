@@ -18,18 +18,22 @@
                     <i class='bx bxl-facebook-circle' ></i>
                 </div>
             </div>
-            <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
+            
               <input type="text" placeholder="Email">
               <input type="password" placeholder="Password">
 
               <!-- 🔗 Link de "Olvidaste tu contraseña" -->
-                <a href="/forgot-password" class="forgot-link">¿Olvidaste tu contraseña?</a>
+              <a href="/forgot-password" class="forgot-link">¿Olvidaste tu contraseña?</a>
 
               <!-- Botones -->
               <button type="submit">Iniciar Sesión</button>
-              <button type="button">Registrarse</button>
+              <a href="{{ url_for('autenticar.registro') }}" class="btn-link">Registrarse</a>
+
+
             </form>
 
     </div>
+
+{% include 'alerts.html' %}
 
 {% endblock %}

@@ -122,3 +122,28 @@ body {
     color: #ffffff; /* azul al pasar el mouse */
     text-decoration: underline;
 }
+
+.formulario button,
+.btn-link {
+    display: block;
+    width: 60%;
+    border: solid thin white;
+    padding: .7rem;
+    border-radius: 2rem;
+    background-color: white;
+    font-weight: 600;
+    margin-top: 1rem;
+    font-size: .9rem;
+    cursor: pointer;
+    color: #222;
+    text-align: center;
+    text-decoration: none; /* 👈 importante para <a> */
+    transition: background-color .3s ease;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formulario button:hover,
+.btn-link:hover {
+    background-color: #ddd;
+}

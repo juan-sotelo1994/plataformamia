@@ -1,0 +1,39 @@
+{% extends 'baselogin.html' %}
+
+{% block title %} Registrate {% endblock %}
+{% block content %}
+
+    <div class="container">
+    <h2 class="text-center mb-4">
+      Recuperación de contraseña <br>
+      <small class="text-muted">Verificación por correo electrónico</small>
+    </h2>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        <div class="card shadow-sm p-4">
+          <form method="POST" action="/reset_password">
+            <h4 class="text-center mb-3">Ingresa tu correo registrado</h4>
+
+            <div class="mb-3">
+              <input type="email" id="correo" name="correo" placeholder="Correo" 
+                     class="form-control" required>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary">Enviar</button>
+              <a class="btn btn-outline-primary" href="{{ url_for('autenticar.verificar') }}">Verificar</a>
+            </div>
+
+            <p class="text-center mt-3">
+              ¿Ya tienes una cuenta? 
+              <a href="{{ url_for('autenticar.login') }}">Inicia sesión</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+

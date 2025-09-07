@@ -3,6 +3,9 @@ import os
 
 app = Flask(__name__)
 
+# clave secreta para sesiones y flash 
+app.secret_key = "clave_super_secreta"
+
 # resgistro de las importaciones y configuraciones 
 from portal import portalprincipal
 from auth import autenticar
