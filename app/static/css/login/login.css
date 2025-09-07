@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Fondo */
+    background-image: url("../../img/login/3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: #fff;
+}
+
+.container-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;  /* centra horizontal */
+    align-items: center;      /* centra vertical */
+}
+
+.formulario {
+    width: 400px;
+    padding: 2rem;
+    background-color: rgba(51, 51, 51, 0.6);
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.create-account {
+    padding: 1.5rem 0;
+    font-size: 1.7rem;
+}
+
+.iconos {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    padding: 1rem 0;
+}
+
+.border-icon {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border: solid thin white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: all .3s ease-in;
+}
+
+.border-icon:hover {
+    background-color: #4a4aee;
+    cursor: pointer;
+}
+
+.cuenta-gratis {
+    padding: 1.5rem 0;
+}
+
+.formulario input {
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: white thin solid;
+    text-align: center;
+    outline: none;
+    padding: .4rem 0;
+    font-size: .9rem;
+    color: white;
+}
+
+/* ---- BOTONES (antes input[type=button]) ---- */
+.formulario button {
+    width: 60%;
+    border: solid thin white;
+    padding: .7rem;
+    border-radius: 2rem;
+    background-color: white;
+    font-weight: 600;
+    margin-top: 1rem;
+    font-size: .9rem;
+    cursor: pointer;
+    color: #222;
+    transition: background-color .3s ease;
+    display: block; /* asegura centrado con margin auto */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formulario button:hover {
+    background-color: #ddd;
+}
+
+/* Link de olvidaste contraseña */
+.forgot-link {
+    display: block;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.forgot-link:hover {
+    color: #ffffff; /* azul al pasar el mouse */
+    text-decoration: underline;
+}

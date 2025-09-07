@@ -1,11 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>soquete </h1>
-</body>
-</html>
+{% extends 'baselogin.html' %}
+
+{% block title %} Login {% endblock %}
+{% block content %}
+
+
+    <div class="container-form sign-in">
+        <form class="formulario">
+            <h2 class="create-account">Iniciar Sesion</h2>
+            <div class="iconos">
+                <div class="border-icon">
+                    <i class='bx bxl-instagram'></i>
+                </div>
+                <div class="border-icon">
+                    <i class='bx bxl-linkedin' ></i>
+                </div>
+                <div class="border-icon">
+                    <i class='bx bxl-facebook-circle' ></i>
+                </div>
+            </div>
+            <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
+              <input type="text" placeholder="Email">
+              <input type="password" placeholder="Password">
+
+              <!-- 🔗 Link de "Olvidaste tu contraseña" -->
+                <a href="/forgot-password" class="forgot-link">¿Olvidaste tu contraseña?</a>
+
+              <!-- Botones -->
+              <button type="submit">Iniciar Sesión</button>
+              <button type="button">Registrarse</button>
+            </form>
+
+    </div>
+
+{% endblock %}
