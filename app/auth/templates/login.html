@@ -13,26 +13,26 @@
                 </div>
                 <div class="border-icon">
                     <i class='bx bxl-linkedin' ></i>
+                    </div>
+                    <div class="border-icon">
+                        <i class='bx bxl-facebook-circle' ></i>
+                    </div>
                 </div>
-                <div class="border-icon">
-                    <i class='bx bxl-facebook-circle' ></i>
-                </div>
-            </div>
-            
-              <input type="text" placeholder="Email">
-              <input type="password" placeholder="Password">
+                
+                <input type="text" placeholder="Email">
+                <input type="password" placeholder="Password">
 
-              <!-- 🔗 Link de "Olvidaste tu contraseña" -->
-              <a href="/forgot-password" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                <!-- 🔗 Link de "Olvidaste tu contraseña" -->
+                <a href="{{ url_for('autenticar.recuperar') }}" class="forgot-link">¿Olvidaste tu contraseña?</a>
 
-              <!-- Botones -->
-              <button type="submit">Iniciar Sesión</button>
-              <a href="{{ url_for('autenticar.registro') }}" class="btn-link">Registrarse</a>
+                <!-- Botones -->
+                <button type="submit">Iniciar Sesión</button>
+                <a href="{{ url_for('autenticar.registro') }}" class="btn-link">Registrarse</a>
 
 
-            </form>
+                </form>
 
-    </div>
+        </div>
 
 {% include 'alerts.html' %}
 

@@ -1,0 +1,43 @@
+{% extends 'baselogin.html' %}
+
+{% block title %} Registrate {% endblock %}
+{% block content %}
+
+<div class="container">
+        <h2 class="text-center mb-4">
+            Recuperación de contraseña <br>
+            <small class="text-muted">Establecer nueva contraseña</small>
+        </h2>
+        
+    <div class="row justify-cotent-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow-sm p-4">
+            <form method="POST" action="/cambiar_contrasena">
+                <h4 class="text-center mb-3">Completa la siguiente información</h4>
+
+                <div class="mb-3">
+                <input type="password" class="form-control" name="nueva_contrasena" 
+                        placeholder="Nueva contraseña" required>
+                </div>
+
+                <div class="mb-3">
+                <input type="password" class="form-control" name="confirmar_contrasena" 
+                        placeholder="Confirmar contraseña" required>
+                </div>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-between">
+                <a class="btn btn-outline-secondary" href="{{ url_for('verificar') }}">Atrás</a>
+                <button type="submit" class="btn btn-primary">Cambiar</button>
+                </div>
+
+                <p class="text-center mt-3">
+                ¿Ya tienes una cuenta? 
+                <a href="{{ url_for('autenticar.login') }}">Inicia sesión</a>
+                </p>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

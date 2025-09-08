@@ -8,6 +8,19 @@ function showLoginSuccess() {
     });
 }
 
+// === SweetAlert al recuperar contraseña ===
+function showRecoverySuccess(mensaje) {
+    Swal.fire({
+        title: '¡Correo enviado!',
+        text: mensaje,
+        icon: 'success',
+        confirmButtonText: 'OK'
+    }).then(() => {
+        // Redirigir después de cerrar la alerta
+        window.location.href = "/verificar"; // <- ajusta si tu ruta tiene Blueprint
+    });
+}
+
 // === Manejo de los botones de cambio (login / registro) ===
 const $btnSignIn = document.querySelector('.sign-in-btn'),
       $btnSignUp = document.querySelector('.sign-up-btn'),  
@@ -29,3 +42,21 @@ if ($loginBtn) {
         showLoginSuccess();
     });
 }
+
+// === Verificar si Flask pasó un mensaje de recuperación ===
+document.addEventListener("DOMContentLoaded", function () {
+    const recoveryMsg = "{{ mensaje | default('') }}"; // Jinja lo renderiza
+    if (recoveryMsg) {
+        showRecoverySuccess(recoveryMsg);
+    }
+});
+document.addEventListener("DOMContentLoaded", function () {
+    if (typeof recoveryMsg !== "undefined" && recoveryMsg) {
+        Swal.fire({
+            title: "¡Correo enviado!",
+            text: recoveryMsg,
+            icon: "success",
+            confirmButtonText: "OK"
+        });
+    }
+});

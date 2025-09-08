@@ -1,0 +1,35 @@
+{% extends 'baselogin.html' %}
+
+{% block title %} Login {% endblock %}
+{% block content %}
+<div class="container-form sign-in">
+    <form class="formulario" method="POST" action="{{ url_for('autenticar.recuperar') }}">
+        <h2 class="create-account">Recuperar Contraseña</h2>
+        
+        <div class="iconos">
+            <div class="border-icon">
+                <i class='bx bxl-instagram'></i>
+            </div>
+            <div class="border-icon">
+                <i class='bx bxl-linkedin'></i>
+            </div>
+            <div class="border-icon">
+                <i class='bx bxl-facebook-circle'></i>
+            </div>
+        </div>
+
+        <!-- Campo de correo -->
+        <input type="email" name="correo" placeholder="Correo registrado" required>
+
+        <!-- Botón principal -->
+        <button type="submit" class="btn-link">Enviar</button>
+
+        <!-- Botón secundario tipo link -->
+        <a href="{{ url_for('autenticar.login') }}" class="btn-link">Volver al inicio de sesión</a>
+    </form>
+</div>
+
+<!-- Script para mostrar alerta -->
+
+{% endblock %}
+

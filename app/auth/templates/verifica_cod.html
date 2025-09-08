@@ -1,0 +1,59 @@
+{% extends 'baselogin.html' %}
+
+{% block title %} Registrate {% endblock %}
+{% block content %}
+<div class="container-form sign-in">
+    <form class="formulario" method="POST" action="{{ url_for('autenticar.restablecer') }}">
+        <h2 class="create-account">Verificación de Código</h2>
+        
+        <div class="iconos">
+            <div class="border-icon">
+                <i class='bx bxl-instagram'></i>
+            </div>
+            <div class="border-icon">
+                <i class='bx bxl-linkedin'></i>
+            </div>
+            <div class="border-icon">
+                <i class='bx bxl-facebook-circle'></i>
+            </div>
+        </div>
+
+        <!-- Campo para el código -->
+        <input type="text" name="codigo" placeholder="Ingresa código de verificación" required>
+
+        <!-- Contador -->
+        <p id="contador" style="margin: 10px 0; font-weight: bold; color: #fff;">
+            Reenviar en 30s
+        </p>
+
+        <!-- Botón principal -->
+        <button type="submit" class="btn-link" id="btn-validar">Validar</button>
+
+        <!-- Botón secundario tipo link -->
+        <a href="{{ url_for('autenticar.recuperar') }}" class="btn-link">Atrás</a>
+    </form>
+</div>
+
+<script>
+    let tiempo = 30;
+    const contador = document.getElementById("contador");
+    const btnValidar = document.getElementById("btn-validar");
+
+    const intervalo = setInterval(() => {
+        tiempo--;
+        contador.textContent = `Reenviar en ${tiempo}s`;
+
+        if (tiempo <= 0) {
+            clearInterval(intervalo);
+            contador.innerHTML = `<a href="{{ url_for('autenticar.verificar') }}" class="btn-link">Reenviar código</a>`;
+            btnValidar.disabled = true;
+            btnValidar.style.opacity = "0.6";
+            btnValidar.style.cursor = "not-allowed";
+        }
+    }, 1000);
+</script>
+
+
+
+{% endblock %}
+
